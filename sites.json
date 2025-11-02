@@ -1,0 +1,23 @@
+[
+    {
+      "id": 1,
+      "title": "Carthage Ruins",
+      "era": "Phénicienne puis romaine",
+      "imageUrl": "/Public/sites/carthage/main.jpg",
+      "adresse": "Carthage, Gouvernorat de Tunis, Tunisie",
+      "price": 15,
+      "open": true,
+      "creation_date": "0814-01-01T00:00:00.000Z",
+      "rating": 4.6,
+      "openingHours": "09:00 - 19:00",
+      "visitorsPerYear": 700000,
+      "comments": [
+        { "author": "Sami", "content": "Amazing ruins! The history is incredible.", "date": "2025-04-12T00:00:00.000Z", "rating": 5 },
+        { "author": "Leila", "content": "Beautiful site but quite crowded in summer.", "date": "2025-06-05T00:00:00.000Z", "rating": 4 }
+      ],
+      "gallery": [
+        "/Public/sites/carthage/1.jpg",
+        "/Public/sites/carthage/2.jpg"
+      ]
+    }
+]
