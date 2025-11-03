@@ -1,23 +1,112 @@
 [
-    {
-      "id": 1,
-      "title": "Carthage Ruins",
-      "era": "Phénicienne puis romaine",
-      "imageUrl": "/Public/sites/carthage/main.jpg",
-      "adresse": "Carthage, Gouvernorat de Tunis, Tunisie",
-      "price": 15,
-      "open": true,
-      "creation_date": "0814-01-01T00:00:00.000Z",
-      "rating": 4.6,
-      "openingHours": "09:00 - 19:00",
-      "visitorsPerYear": 700000,
-      "comments": [
-        { "author": "Sami", "content": "Amazing ruins! The history is incredible.", "date": "2025-04-12T00:00:00.000Z", "rating": 5 },
-        { "author": "Leila", "content": "Beautiful site but quite crowded in summer.", "date": "2025-06-05T00:00:00.000Z", "rating": 4 }
-      ],
-      "gallery": [
-        "/Public/sites/carthage/1.jpg",
-        "/Public/sites/carthage/2.jpg"
-      ]
-    }
+  {
+    "id": 1,
+    "title": "Carthage Ruins",
+    "era": "Phénicienne puis romaine",
+    "imageUrl": "sites/carthage_ruins/main.jpg",
+    "adresse": "Carthage, Gouvernorat de Tunis, Tunisie",
+    "price": 15,
+    "open": true,
+    "creation_date": "814-01-01",
+    "rating": 4.6,
+    "openingHours": "09:00 - 19:00",
+    "visitorsPerYear": 700000,
+    "comments": [],
+    "gallery": [
+      "sites/carthage_ruins/1.jpg",
+      "sites/carthage_ruins/2.jpg"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Amphithéâtre d'El Jem",
+    "era": "Romaine",
+    "imageUrl": "sites/amphitheatre/main.jpg",
+    "adresse": "El Jem, Gouvernorat de Mahdia, Tunisie",
+    "price": 12,
+    "open": true,
+    "creation_date": "238-01-01",
+    "rating": 4.9,
+    "openingHours": "08:00 - 18:00",
+    "visitorsPerYear": 500000,
+    "comments": [],
+    "gallery": [
+      "sites/amphitheatre/1.jpg",
+      "sites/amphitheatre/2.jpg",
+      "sites/amphitheatre/3.jpg"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Dougga",
+    "era": "Numide puis romaine",
+    "imageUrl": "sites/dougga/main.jpg",
+    "adresse": "Dougga, Gouvernorat de Béja, Tunisie",
+    "price": 10,
+    "open": true,
+    "creation_date": "-002-01-01",
+    "rating": 4.7,
+    "openingHours": "09:00 - 17:30",
+    "visitorsPerYear": 250000,
+    "comments": [],
+    "gallery": [
+      "sites/dougga/1.jpg",
+      "sites/dougga/2.jpg"
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Bulla Regia",
+    "era": "Romaine",
+    "imageUrl": "sites/bullaregia/main.jpg",
+    "adresse": "Bulla Regia, Gouvernorat de Jendouba, Tunisie",
+    "price": 10,
+    "open": true,
+    "creation_date": "100-01-01",
+    "rating": 4.5,
+    "openingHours": "08:30 - 17:30",
+    "visitorsPerYear": 120000,
+    "comments": [],
+    "gallery": [
+      "sites/bullaregia/1.jpg",
+      "sites/bullaregia/2.jpg"
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Thuburbo Majus",
+    "era": "Romaine",
+    "imageUrl": "sites/thuburbo_majus/main.jpg",
+    "adresse": "Thuburbo Majus, Gouvernorat de Béja, Tunisie",
+    "price": 9,
+    "open": true,
+    "creation_date": "146-01-01",
+    "rating": 4.3,
+    "openingHours": "08:30 - 17:00",
+    "visitorsPerYear": 90000,
+    "comments": [],
+    "gallery": [
+      "sites/thuburbo_majus/1.jpg",
+      "sites/thuburbo_majus/2.jpg",
+      "sites/thuburbo_majus/3.jpg"
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Hadrumète (Sousse Romain)",
+    "era": "Romaine",
+    "imageUrl": "sites/hadrumetum/main.jpg",
+    "adresse": "Sousse, Gouvernorat de Sousse, Tunisie",
+    "price": 11,
+    "open": true,
+    "creation_date": "50-01-01",
+    "rating": 4.4,
+    "openingHours": "09:00 - 18:00",
+    "visitorsPerYear": 150000,
+    "comments": [],
+    "gallery": [
+      "sites/hadrumetum/1.jpg",
+      "sites/hadrumetum/2.jpg"
+    ]
+  }
 ]
