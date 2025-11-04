@@ -14,7 +14,8 @@
     "comments": [],
     "gallery": [
       "sites/carthage_ruins/1.jpg",
-      "sites/carthage_ruins/2.jpg"
+      "sites/carthage_ruins/2.jpg",
+      "sites/carthage_ruins/3.jpg"
     ]
   },
   {
@@ -51,14 +52,15 @@
     "comments": [],
     "gallery": [
       "sites/dougga/1.jpg",
-      "sites/dougga/2.jpg"
+      "sites/dougga/2.jpg",
+      "sites/dougga/3.jpg"
     ]
   },
   {
     "id": 4,
     "title": "Bulla Regia",
     "era": "Romaine",
-    "imageUrl": "sites/bullaregia/main.jpg",
+    "imageUrl": "sites/bulla_regia/main.jpg",
     "adresse": "Bulla Regia, Gouvernorat de Jendouba, Tunisie",
     "price": 10,
     "open": true,
@@ -68,8 +70,9 @@
     "visitorsPerYear": 120000,
     "comments": [],
     "gallery": [
-      "sites/bullaregia/1.jpg",
-      "sites/bullaregia/2.jpg"
+      "sites/bulla_regia/1.jpg",
+      "sites/bulla_regia/2.jpg",
+      "sites/bulla_regia/3.jpg"
     ]
   },
   {
@@ -93,20 +96,22 @@
   },
   {
     "id": 6,
-    "title": "Hadrumète (Sousse Romain)",
+    "title": "Sbeitla (Sufetula)",
     "era": "Romaine",
-    "imageUrl": "sites/hadrumetum/main.jpg",
-    "adresse": "Sousse, Gouvernorat de Sousse, Tunisie",
-    "price": 11,
+    "imageUrl": "sites/sbeitla/main.jpg",
+    "adresse": "Sbeitla, Gouvernorat de Kasserine, Tunisie",
+    "price": 10,
     "open": true,
-    "creation_date": "50-01-01",
-    "rating": 4.4,
-    "openingHours": "09:00 - 18:00",
-    "visitorsPerYear": 150000,
+    "creation_date": "100-01-01",
+    "rating": 4.7,
+    "openingHours": "08:00 - 18:00",
+    "visitorsPerYear": 130000,
     "comments": [],
     "gallery": [
-      "sites/hadrumetum/1.jpg",
-      "sites/hadrumetum/2.jpg"
+      "sites/sbeitla/1.jpg",
+      "sites/sbeitla/2.jpg",
+      "sites/sbeitla/3.jpg"
     ]
   }
+
 ]
