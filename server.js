@@ -74,10 +74,10 @@ app.delete('/sites/:siteId/comments/:commentId',(req,res)=>{
   const siteId = parseInt(req.params.siteId);
   const site = sites.find(s => s.id === siteId);
   if(!site){return res.status(404).json({message: 'Site not found' });}
-  const comment = site.comments.find(c => c.id === commentId);
+  const comment = site.comments.find(c => c.commentId === commentId);
   if(!comment){
     return res.status(404).json({message: 'Comment not found'});}
-  site.comments = site.comments.filter(c => c.id !== commentId);
+  site.comments = site.comments.filter(c => c.commentId !== commentId);
   writeSites(sites);
   res.json({ message: 'Deleted comment successfully' });
 })
