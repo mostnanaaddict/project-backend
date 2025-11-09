@@ -68,4 +68,19 @@ app.delete('/sites/:id', (req, res) => {
   res.json({ message: 'Deleted successfully' });
 });
 
+app.delete('/sites/:siteId/comments/:commentId',(req,res)=>{
+  let sites = readSites();
+  const commentId = parseInt(req.params.commentId);
+  const siteId = parseInt(req.params.siteId);
+  const site = sites.find(s => s.id === siteId);
+  if(!site){return res.status(404).json({message: 'Site not found' });}
+  const comment = site.comments.find(c => c.id === commentId);
+  if(!comment){
+    return res.status(404).json({message: 'Comment not found'});}
+  site.comments = site.comments.filter(c => c.id !== commentId);
+  writeSites(sites);
+  res.json({ message: 'Deleted comment successfully' });
+})
+
+
 app.listen(3000, () => console.log('✅ Server running at http://localhost:3000'));
