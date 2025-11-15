@@ -1,4 +1,7 @@
 const fs = require('fs');
+const multer = require('multer');
+const path = require('path');
+
 
 //express is framwork 2 make it easy
 const express = require('express');
@@ -9,6 +12,36 @@ const app = express();
 
 app.use(cors());
 app.use(express.json());
+
+// ---------- Image Upload Settings ----------
+const uploadDir = path.join(__dirname, 'uploads');
+if (!fs.existsSync(uploadDir)) {
+  fs.mkdirSync(uploadDir);
+}
+
+// Store uploaded images in /uploads
+const storage = multer.diskStorage({
+  destination: (req, file, cb) => cb(null, uploadDir),
+  filename: (req, file, cb) => {
+    const uniqueName = Date.now() + '-' + file.originalname;
+    cb(null, uniqueName);
+  }
+});
+
+const upload = multer({ storage });
+
+// Make uploads publicly accessible
+app.use('/uploads', express.static(uploadDir));
+
+// Upload endpoint
+app.post('/upload', upload.single('image'), (req, res) => {
+  if (!req.file) return res.status(400).json({ message: 'No file uploaded' });
+
+  const url = `http://localhost:3000/uploads/${req.file.filename}`;
+  res.json({ url });
+});
+
+
 
 //defines a const to store the data
 const FILE_PATH = 'sites.json';

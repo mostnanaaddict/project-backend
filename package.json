@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",
@@ -12,6 +13,15 @@
   "dependencies": {
     "body-parser": "^2.2.0",
     "cors": "^2.8.5",
-    "express": "^5.1.0"
-  }
+    "express": "^5.1.0",
+    "multer": "^2.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mostnanaaddict/project-backend.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mostnanaaddict/project-backend/issues"
+  },
+  "homepage": "https://github.com/mostnanaaddict/project-backend#readme"
 }
