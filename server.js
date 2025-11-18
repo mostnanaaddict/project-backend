@@ -63,15 +63,15 @@ function writeSites(sites) {
 }
 
 
-//get da sites
+// get da sites
 app.get('/sites', (req, res) => {
     let sites = readSites();
-  res.json(sites);
+    res.json(sites);
 });
 
 //creates a new site wit the formulaire info
 app.post('/sites', (req, res) => {
-    let sites = readSites();
+  let sites = readSites();
   const newSite = { id: Date.now(), ...req.body };
   sites.push(newSite);
   writeSites(sites);
