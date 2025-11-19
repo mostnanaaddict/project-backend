@@ -229,5 +229,24 @@
     "description": "Kerkouane is one of the best-preserved Punic cities in the Mediterranean. Unlike many other ancient towns in Tunisia, it was abandoned and never rebuilt by the Romans, giving a rare insight into Punic urban planning.",
     "thumbnail": "http://localhost:3000/uploads/1763504309229-Capture d'Ã©cran 2025-10-07 213723.png",
     "open": false
+  },
+  {
+    "id": 8,
+    "title": "Carthage Ruins",
+    "era": "Phoenician then Roman",
+    "address": "Carthage, Tunis Governorate, Tunisia",
+    "price": 15,
+    "creation_date": "0814-01-01",
+    "rating": 4.6,
+    "openingHours": "09:00 - 19:00",
+    "visitorsPerYear": 700000,
+    "description": "The ancient city of Carthage, once the center of the powerful Carthaginian Empire, later became a major Roman city. Visitors can explore the Antonine Baths, the amphitheater, and the ruins that overlook the Mediterranean Sea.",
+    "thumbnail": "sites/carthage_ruins/main.jpg",
+    "gallery": [
+      "sites/carthage_ruins/1.jpg",
+      "sites/carthage_ruins/2.jpg",
+      "sites/carthage_ruins/3.jpg"
+    ],
+    "open": true
   }
 ]

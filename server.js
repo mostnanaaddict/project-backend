@@ -63,15 +63,25 @@ function writeSites(sites) {
 }
 
 
-// get da sites
+//get da sites
 app.get('/sites', (req, res) => {
     let sites = readSites();
-    res.json(sites);
+  res.json(sites);
 });
+
+app.get('/sites/:id', (req,res)=>{
+  const id = parseInt(req.params.id);
+  let sites = readSites();
+  const site = sites.find(s=>s.id===id);
+  if(site)
+    res.json(site);
+  else
+    res.status(404).json({ message: 'Site not found' });
+})
 
 //creates a new site wit the formulaire info
 app.post('/sites', (req, res) => {
-  let sites = readSites();
+    let sites = readSites();
   const newSite = { id: Date.now(), ...req.body };
   sites.push(newSite);
   writeSites(sites);
