@@ -1,14 +1,13 @@
 {
   "admin": [
     {
-      "id": 1,
       "username": "admin",
-      "password": "admin@123"
+      "password": "admin123"
     }
   ],
   "sites": [
     {
-      "id": 1,
+      "id": "1",
       "title": "Carthage Ruins",
       "era": "Phoenician then Roman",
       "thumbnail": "sites/carthage_ruins/main.jpg",
@@ -23,14 +22,14 @@
       "description": "The ancient city of Carthage, once the center of the powerful Carthaginian Empire, later became a major Roman city. Visitors can explore the Antonine Baths, the amphitheater, and the ruins that overlook the Mediterranean Sea.",
       "comments": [
         {
-          "commentId": 1,
+          "commentId": "1",
           "author": "Alice Dupont",
           "date": "2024-06-18",
           "content": "Amazing historical site with a beautiful sea view. The Roman baths are truly impressive!",
           "rating": 5
         },
         {
-          "commentId": 2,
+          "commentId": "2",
           "author": "John Smith",
           "date": "2024-07-02",
           "content": "A must-see if you visit Tunis. Could use more informational signs though.",
@@ -44,7 +43,7 @@
       ]
     },
     {
-      "id": 2,
+      "id": "2",
       "title": "El Jem Amphitheatre",
       "era": "Roman",
       "thumbnail": "sites/amphitheatre/main.jpg",
@@ -59,14 +58,14 @@
       "description": "Built in the 3rd century, the El Jem Amphitheatre is one of the largest Roman coliseums in the world. It could hold up to 35,000 spectators and is remarkably well-preserved.",
       "comments": [
         {
-          "commentId": 3,
+          "commentId": "3",
           "author": "Sara Ben Ali",
           "date": "2024-05-10",
           "content": "It feels like stepping back into ancient Rome. Spectacular structure!",
           "rating": 5
         },
         {
-          "commentId": 4,
+          "commentId": "4",
           "author": "Marcus Lee",
           "date": "2024-06-05",
           "content": "Even more impressive than expected. Definitely worth the trip!",
@@ -80,7 +79,7 @@
       ]
     },
     {
-      "id": 3,
+      "id": "3",
       "title": "Dougga",
       "era": "Numidian then Roman",
       "thumbnail": "sites/dougga/main.jpg",
@@ -95,14 +94,14 @@
       "description": "Dougga is one of the best-preserved Roman towns in North Africa. The site includes a well-maintained theater, temples, baths, and houses surrounded by green hills.",
       "comments": [
         {
-          "commentId": 5,
+          "commentId": "5",
           "author": "Elena Rossi",
           "date": "2024-07-20",
           "content": "A quiet and magical site. You can really feel the history here.",
           "rating": 5
         },
         {
-          "commentId": 6,
+          "commentId": "6",
           "author": "Tom H.",
           "date": "2024-08-03",
           "content": "The theater is in great condition. Bring water—it gets hot!",
@@ -116,7 +115,7 @@
       ]
     },
     {
-      "id": 4,
+      "id": "4",
       "title": "Bulla Regia",
       "era": "Roman",
       "thumbnail": "sites/bulla_regia/main.jpg",
@@ -131,14 +130,14 @@
       "description": "Famous for its underground Roman villas, Bulla Regia offers a rare glimpse into how ancient residents kept cool during the hot summers. Many mosaics are still visible.",
       "comments": [
         {
-          "commentId": 7,
+          "commentId": "7",
           "author": "Amine Gharbi",
           "date": "2024-04-14",
           "content": "The underground houses are unique! Great place for archaeology lovers.",
           "rating": 5
         },
         {
-          "commentId": 8,
+          "commentId": "8",
           "author": "Laura P.",
           "date": "2024-05-22",
           "content": "Less crowded than other sites, but very interesting.",
@@ -152,7 +151,7 @@
       ]
     },
     {
-      "id": 5,
+      "id": "5",
       "title": "Thuburbo Majus",
       "era": "Roman",
       "thumbnail": "sites/thuburbo_majus/main.jpg",
@@ -167,14 +166,14 @@
       "description": "Thuburbo Majus was a prosperous Roman city known for its large forum, temples, and well-planned layout. The site is surrounded by beautiful countryside and olive trees.",
       "comments": [
         {
-          "commentId": 9,
+          "commentId": "9",
           "author": "Nadia K.",
           "date": "2024-03-15",
           "content": "Very peaceful and open area. Perfect for photos.",
           "rating": 4
         },
         {
-          "commentId": 10,
+          "commentId": "10",
           "author": "Hassan M.",
           "date": "2024-06-28",
           "content": "Nice ruins, though less restored than El Jem or Dougga.",
@@ -188,7 +187,7 @@
       ]
     },
     {
-      "id": 6,
+      "id": "6",
       "title": "Sbeitla (Sufetula)",
       "era": "Roman",
       "thumbnail": "sites/sbeitla/main.jpg",
@@ -203,14 +202,14 @@
       "description": "Sbeitla, known in antiquity as Sufetula, features an exceptionally well-preserved Roman forum and temples. It played an important role during the Byzantine and early Islamic periods.",
       "comments": [
         {
-          "commentId": 11,
+          "commentId": "11",
           "author": "Emma Johnson",
           "date": "2024-07-10",
           "content": "Fantastic ruins, well maintained. You can walk freely everywhere!",
           "rating": 5
         },
         {
-          "commentId": 12,
+          "commentId": "12",
           "author": "Rami Trabelsi",
           "date": "2024-07-29",
           "content": "Very clean site, staff was helpful and friendly.",
