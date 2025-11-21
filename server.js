@@ -48,19 +48,80 @@ const FILE_PATH = 'sites.json';
 
 //gets the data from the json file
 function readSites() {
-  //reads content of site.json synchronously (blocks execution till done) & utf8 returns string instead buffer
-  const data = fs.readFileSync(FILE_PATH, 'utf8');
-  //converts string into json object
-  return JSON.parse(data);
+    const data = fs.readFileSync(FILE_PATH, 'utf-8');
+    const json = JSON.parse(data);
+    return json.sites; 
 }
-//et sites = readSites();
+function readAdmin() {
+    const data = fs.readFileSync(FILE_PATH, 'utf-8');
+    const json = JSON.parse(data);
+    return json.admin; 
+}
+
 
 function writeSites(sites) {
-  //helps save updates to json file
-  //stringify converts js array to json string & 2 is indentation to make json readable
-  //it overwrites sites.json wit the new json string
-  fs.writeFileSync(FILE_PATH, JSON.stringify(sites, null, 2));
+    // read full json first
+    const data = fs.readFileSync(FILE_PATH, 'utf-8');
+    const json = JSON.parse(data);
+    json.sites = sites; 
+    fs.writeFileSync(FILE_PATH, JSON.stringify(json, null, 2));
 }
+
+
+
+//get admin
+// --- FIX: Implement filtering logic for the login GET request ---
+app.get('/admin', (req, res) => {
+    const { username, password } = req.query;
+
+    // If Angular forgets to send username or password → FAIL
+    if (!username || !password) {
+        return res.json([]);
+    }
+
+    const admins = readAdmin(); // <-- returns array
+
+    // strict match
+    const match = admins.find(a =>
+        a.username === username &&
+        a.password === password
+    );
+
+    if (match) {
+        res.json([match]);   // SUCCESS
+    } else {
+        res.json([]);        // FAIL
+    }
+});
+// Change admin password
+app.put('/admin/password', (req, res) => {
+  const { username, oldPassword, newPassword } = req.body;
+
+  const admins = readAdmin(); // returns array of admins
+
+  // Find the admin
+  const admin = admins.find(a => a.username === username && a.password === oldPassword);
+
+  if (!admin) {
+    return res.status(400).json({ message: 'Username or old password is incorrect' });
+  }
+
+  // Update password
+  admin.password = newPassword;
+
+  // Write back to JSON
+  const data = fs.readFileSync(FILE_PATH, 'utf-8');
+  const json = JSON.parse(data);
+  json.admin = admins;
+  fs.writeFileSync(FILE_PATH, JSON.stringify(json, null, 2));
+
+  res.json({ message: 'Password updated successfully' });
+});
+
+
+
+
+
 
 
 // get da sites
