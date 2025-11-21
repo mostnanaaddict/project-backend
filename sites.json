@@ -1,6 +1,6 @@
 [
   {
-    "id": 1,
+    "id": "1",
     "title": "Carthage Ruins",
     "era": "Phoenician then Roman",
     "thumbnail": "sites/carthage_ruins/main.jpg",
@@ -8,7 +8,6 @@
     "price": 15,
     "open": true,
     "creation_date": "0814-01-01",
-    "isBC": false,
     "rating": 4.6,
     "openingHours": "09:00 - 19:00",
     "visitorsPerYear": 700000,
@@ -36,7 +35,7 @@
     ]
   },
   {
-    "id": 2,
+    "id": "2",
     "title": "El Jem Amphitheatre",
     "era": "Roman",
     "thumbnail": "sites/amphitheatre/main.jpg",
@@ -44,7 +43,6 @@
     "price": 12,
     "open": true,
     "creation_date": "0238-01-01",
-    "isBC": false,
     "rating": 4.9,
     "openingHours": "08:00 - 18:00",
     "visitorsPerYear": 500000,
@@ -72,15 +70,14 @@
     ]
   },
   {
-    "id": 3,
+    "id": "3",
     "title": "Dougga",
     "era": "Numidian then Roman",
     "thumbnail": "sites/dougga/main.jpg",
     "address": "Dougga, Béja Governorate, Tunisia",
     "price": 10,
     "open": true,
-    "creation_date": "0002-01-01",
-    "isBC": true,
+    "creation_date": "-0002-01-01",
     "rating": 4.7,
     "openingHours": "09:00 - 17:30",
     "visitorsPerYear": 250000,
@@ -108,7 +105,7 @@
     ]
   },
   {
-    "id": 4,
+    "id": "4",
     "title": "Bulla Regia",
     "era": "Roman",
     "thumbnail": "sites/bulla_regia/main.jpg",
@@ -116,7 +113,6 @@
     "price": 10,
     "open": true,
     "creation_date": "0100-01-01",
-    "isBC": false,
     "rating": 4.5,
     "openingHours": "08:30 - 17:30",
     "visitorsPerYear": 120000,
@@ -144,7 +140,7 @@
     ]
   },
   {
-    "id": 5,
+    "id": "5",
     "title": "Thuburbo Majus",
     "era": "Roman",
     "thumbnail": "sites/thuburbo_majus/main.jpg",
@@ -152,7 +148,6 @@
     "price": 9,
     "open": true,
     "creation_date": "0146-01-01",
-    "isBC": false,
     "rating": 4.3,
     "openingHours": "08:30 - 17:00",
     "visitorsPerYear": 90000,
@@ -180,7 +175,7 @@
     ]
   },
   {
-    "id": 6,
+    "id": "6",
     "title": "Sbeitla (Sufetula)",
     "era": "Roman",
     "thumbnail": "sites/sbeitla/main.jpg",
@@ -188,7 +183,6 @@
     "price": 10,
     "open": true,
     "creation_date": "0100-01-01",
-    "isBC": false,
     "rating": 4.7,
     "openingHours": "08:00 - 18:00",
     "visitorsPerYear": 130000,
@@ -216,36 +210,21 @@
     ]
   },
   {
-    "id": 7,
-    "title": "testBc",
+    "id": "7",
+    "title": "Kerkouane",
     "era": "Punic",
     "address": "Kerkouane, Nabeul Governorate, Tunisia",
     "price": 10,
-    "creation_date": "0200-01-01",
+    "creation_date": "00500-01-01",
     "isBC": true,
     "rating": 4.4,
     "openingHours": "08:00 - 17:00",
     "visitorsPerYear": 200000,
     "description": "Kerkouane is one of the best-preserved Punic cities in the Mediterranean. Unlike many other ancient towns in Tunisia, it was abandoned and never rebuilt by the Romans, giving a rare insight into Punic urban planning.",
-    "thumbnail": "http://localhost:3000/uploads/1763504309229-Capture d'Ã©cran 2025-10-07 213723.png",
-    "open": false
-  },
-  {
-    "id": 8,
-    "title": "Carthage Ruins",
-    "era": "Phoenician then Roman",
-    "address": "Carthage, Tunis Governorate, Tunisia",
-    "price": 15,
-    "creation_date": "0814-01-01",
-    "rating": 4.6,
-    "openingHours": "09:00 - 19:00",
-    "visitorsPerYear": 700000,
-    "description": "The ancient city of Carthage, once the center of the powerful Carthaginian Empire, later became a major Roman city. Visitors can explore the Antonine Baths, the amphitheater, and the ruins that overlook the Mediterranean Sea.",
-    "thumbnail": "sites/carthage_ruins/main.jpg",
+    "thumbnail": "http://localhost:3000/uploads/1763580952522-image_2025-11-17_182615709.png",
     "gallery": [
-      "sites/carthage_ruins/1.jpg",
-      "sites/carthage_ruins/2.jpg",
-      "sites/carthage_ruins/3.jpg"
+      "http://localhost:3000/uploads/1763580939292-2kerk.jpg",
+      "http://localhost:3000/uploads/1763580939314-1kerk.jpg"
     ],
     "open": true
   }

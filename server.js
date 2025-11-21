@@ -69,15 +69,12 @@ app.get('/sites', (req, res) => {
   res.json(sites);
 });
 
-app.get('/sites/:id', (req,res)=>{
-  const id = parseInt(req.params.id);
-  let sites = readSites();
-  const site = sites.find(s=>s.id===id);
-  if(site)
-    res.json(site);
-  else
-    res.status(404).json({ message: 'Site not found' });
-})
+// app.get('/sites/:id', (req,res)=>{
+//   const id = parseInt(req.params.id);
+//   let sites = readSites();
+//   const site = sites.find(s=>s.id===id);
+//   res.json(site);
+// })
 
 //creates a new site wit the formulaire info
 app.post('/sites', (req, res) => {
