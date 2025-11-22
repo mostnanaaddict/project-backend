@@ -2,7 +2,7 @@
   "admin": [
     {
       "username": "admin",
-      "password": "admin123"
+      "password": "admin@123"
     }
   ],
   "sites": [
@@ -58,21 +58,22 @@
       "description": "Built in the 3rd century, the El Jem Amphitheatre is one of the largest Roman coliseums in the world. It could hold up to 35,000 spectators and is remarkably well-preserved.",
       "comments": [
         {
-          "commentId": "3",
+          "commentId": "1",
           "author": "Sara Ben Ali",
           "date": "2024-05-10",
           "content": "It feels like stepping back into ancient Rome. Spectacular structure!",
           "rating": 5
         },
         {
-          "commentId": "4",
+          "commentId": "2",
           "author": "Marcus Lee",
           "date": "2024-06-05",
           "content": "Even more impressive than expected. Definitely worth the trip!",
           "rating": 5
         }
+        
       ],
-      "gallery": [
+      "gallery": [  
         "sites/amphitheatre/1.jpg",
         "sites/amphitheatre/2.jpg",
         "sites/amphitheatre/3.jpg"
@@ -221,6 +222,21 @@
         "sites/sbeitla/2.jpg",
         "sites/sbeitla/3.jpg"
       ]
+    },
+    {
+      "id": 7,
+      "title": "ca",
+      "era": "Punic",
+      "address": "Kerkouane, Nabeul Governorate, Tunisia",
+      "price": 10,
+      "creation_date": "00500-01-01",
+      "isBC": false,
+      "rating": 4.4,
+      "openingHours": "08:00 - 17:00",
+      "visitorsPerYear": 200000,
+      "description": "Kerkouane is one of the best-preserved Punic cities in the Mediterranean. Unlike many other ancient towns in Tunisia, it was abandoned and never rebuilt by the Romans, giving a rare insight into Punic urban planning.",
+      "thumbnail": "http://localhost:3000/uploads/1763829648102-Capture d'Ã©cran 2025-09-17 173627.png",
+      "open": false
     }
   ]
 }

@@ -145,6 +145,43 @@ app.post('/sites', (req, res) => {
   writeSites(sites);
   res.json(newSite);
 });
+  app.post('/sites/:id/comments', (req, res) => {
+    let sites = readSites();
+    const siteId = req.params.id;
+    const site = sites.find(s => s.id === siteId);
+
+    if (!site) {
+      return res.status(404).json({ message: 'Site not found' });
+    }
+
+    const newComment = {
+      commentId: req.body.commentId,          
+      author: req.body.author,
+      date: new Date(), // default today
+      content: req.body.content,
+      rating: req.body.rating
+    };
+
+    // Initialize comments array if missing
+    site.comments = site.comments || [];
+    site.comments.push(newComment);
+
+    // Write updated sites back to JSON
+    writeSites(sites);
+
+    res.json(newComment);
+  });
+
+
+
+
+
+
+
+
+
+
+
 
 //edits the site according to the id wit the formulaire info
 app.put('/sites/:id', (req, res) => {
@@ -163,7 +200,7 @@ app.put('/sites/:id', (req, res) => {
 //deletes the site according to the id
 app.delete('/sites/:id', (req, res) => {
     let sites = readSites();
-  const id = parseInt(req.params.id);
+  const id = req.params.id;
   sites = sites.filter(s => s.id !== id);
   writeSites(sites);
   res.json({ message: 'Deleted successfully' });
@@ -171,8 +208,8 @@ app.delete('/sites/:id', (req, res) => {
 
 app.delete('/sites/:siteId/comments/:commentId',(req,res)=>{
   let sites = readSites();
-  const commentId = parseInt(req.params.commentId);
-  const siteId = parseInt(req.params.siteId);
+  const commentId = req.params.commentId ;
+  const siteId = req.params.siteId;
   const site = sites.find(s => s.id === siteId);
   if(!site){return res.status(404).json({message: 'Site not found' });}
   const comment = site.comments.find(c => c.commentId === commentId);
