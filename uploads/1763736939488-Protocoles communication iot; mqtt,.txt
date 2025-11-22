@@ -1,0 +1,41 @@
+Protocoles communication iot; mqtt, coap, http
+
+context:
+-constrainte des capteurs/objects: faible bande passante, faible puissance et duree de vie des batterie, memoire et cpu limites microcontroleurs)
+-besio d'efficacite , legerete, interoperabilite
+necessite de protocoles legers et efficaces
+trois protocoles: mqtt, coap, http
+  modeles de communication (pub/sub vs client-serveur)
+MQTT message queuein telematry transport (uses tcp)
+modele publier/subscriber: description du modele et de son efficacite par rapport au modele client... blah
+
+lient: les appareils iot
+broker: il distribue les msg
+basé sur tcp/ip
+niveau de qualite de service:
+Qos 0: envoi sans garantie (at most 1 )
+Qos 1: garantie d'arrivee (at least 1 )
+2 gatantie d'arrive unique (exactly 1)
+
+//publisher contacts the broker 
+avantages: legerete, faible consommation, support de Qos,
+(-) necessite un broker central -> dependence sur broker, base sur tcp (rzin)
+
+COAP:
+pour les applications a contrainte
+modele requete/reponse similaire a http mais adapte aux contraintes
+base sur udp
+ utilise des methodes GET , POST, PUT , DEMETE sur des resspirces
+reseaux constraints concu specifiquement pour les reseaux low-power(puissance leger) 
+
+
+utilise le protocole udp pour la legerete et la rapidite
+couche de diabilite integree pour compenser la non-diabilite d'udp, coap inclut sa propre gestion des messages fiable (confirmable et non confirmable)
+avantages: tres leger base sur udp ideal pour les capteurs simples gestion native des ressources
+inconvenients: moins adapte au broadcast de messages qu'un podele pub/sub, la fiabilite doit etre geree au niveau applicatif (coap base sur niveau transport (pas fiable))
+
+protoole http (uses tcp)
+modele client/serveur classique: requete/reponse synchrone
+role dans l'iot: pricipalement pour la communication avec les passerelles ou le cloud
+pourquoi moins adapte aux appareils contrints? en tetes voluminuceux, protocoles synchrone, base sur tcp
+

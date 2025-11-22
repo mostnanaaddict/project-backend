@@ -149,7 +149,7 @@ app.post('/sites', (req, res) => {
 //edits the site according to the id wit the formulaire info
 app.put('/sites/:id', (req, res) => {
     let sites = readSites();
-  const id = parseInt(req.params.id);
+  const id = req.params.id;
   const index = sites.findIndex(s => s.id === id);
   if (index !== -1) {
     sites[index] = { ...sites[index], ...req.body };
