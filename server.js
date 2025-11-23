@@ -3,23 +3,21 @@ const multer = require('multer');
 const path = require('path');
 
 
-//express is framwork 2 make it easy
 const express = require('express');
-//alows angular to connect to backend
+
 const cors = require('cors');
-//handles requests
+
 const app = express();
 
 app.use(cors());
 app.use(express.json());
 
-// ---------- Image Upload Settings ----------
+
 const uploadDir = path.join(__dirname, 'uploads');
 if (!fs.existsSync(uploadDir)) {
   fs.mkdirSync(uploadDir);
 }
 
-// Store uploaded images in /uploads
 const storage = multer.diskStorage({
   destination: (req, file, cb) => cb(null, uploadDir),
   filename: (req, file, cb) => {
@@ -30,10 +28,9 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage });
 
-// Make uploads publicly accessible
+
 app.use('/uploads', express.static(uploadDir));
 
-// Upload endpoint
 app.post('/upload', upload.single('image'), (req, res) => {
   if (!req.file) return res.status(400).json({ message: 'No file uploaded' });
 
@@ -43,10 +40,10 @@ app.post('/upload', upload.single('image'), (req, res) => {
 
 
 
-//defines a const to store the data
+
 const FILE_PATH = 'sites.json';
 
-//gets the data from the json file
+
 function readSites() {
     const data = fs.readFileSync(FILE_PATH, 'utf-8');
     const json = JSON.parse(data);
@@ -60,7 +57,7 @@ function readAdmin() {
 
 
 function writeSites(sites) {
-    // read full json first
+    
     const data = fs.readFileSync(FILE_PATH, 'utf-8');
     const json = JSON.parse(data);
     json.sites = sites; 
@@ -69,47 +66,43 @@ function writeSites(sites) {
 
 
 
-//get admin
-// --- FIX: Implement filtering logic for the login GET request ---
 app.get('/admin', (req, res) => {
     const { username, password } = req.query;
 
-    // If Angular forgets to send username or password → FAIL
+    
     if (!username || !password) {
         return res.json([]);
     }
 
-    const admins = readAdmin(); // <-- returns array
+    const admins = readAdmin(); 
 
-    // strict match
     const match = admins.find(a =>
         a.username === username &&
         a.password === password
     );
 
     if (match) {
-        res.json([match]);   // SUCCESS
+        res.json([match]);   
     } else {
-        res.json([]);        // FAIL
+        res.json([]);        
     }
 });
-// Change admin password
+
 app.put('/admin/password', (req, res) => {
   const { username, oldPassword, newPassword } = req.body;
 
-  const admins = readAdmin(); // returns array of admins
+  const admins = readAdmin(); 
 
-  // Find the admin
   const admin = admins.find(a => a.username === username && a.password === oldPassword);
 
   if (!admin) {
     return res.status(400).json({ message: 'Username or old password is incorrect' });
   }
 
-  // Update password
+ 
   admin.password = newPassword;
 
-  // Write back to JSON
+
   const data = fs.readFileSync(FILE_PATH, 'utf-8');
   const json = JSON.parse(data);
   json.admin = admins;
@@ -119,20 +112,12 @@ app.put('/admin/password', (req, res) => {
 });
 
 
-// get da sites
 app.get('/sites', (req, res) => {
     let sites = readSites();
   res.json(sites);
 });
 
-// app.get('/sites/:id', (req,res)=>{
-//   const id = parseInt(req.params.id);
-//   let sites = readSites();
-//   const site = sites.find(s=>s.id===id);
-//   res.json(site);
-// })
 
-//creates a new site wit the formulaire info
 app.post('/sites', (req, res) => {
     let sites = readSites();
   const newSite = { id: Date.now(), ...req.body };
@@ -157,11 +142,10 @@ app.post('/sites', (req, res) => {
       rating: req.body.rating
     };
 
-    // Initialize comments array if missing
+    
     site.comments = site.comments || [];
     site.comments.push(newComment);
 
-    // Write updated sites back to JSON
     writeSites(sites);
 
     res.json(newComment);
@@ -178,7 +162,7 @@ app.post('/sites', (req, res) => {
 
 
 
-//edits the site according to the id wit the formulaire info
+
 app.put('/sites/:id', (req, res) => {
     let sites = readSites();
   const id = req.params.id;
@@ -192,7 +176,7 @@ app.put('/sites/:id', (req, res) => {
   }
 });
 
-//deletes the site according to the id
+
 app.delete('/sites/:id', (req, res) => {
     let sites = readSites();
   const id = req.params.id;
