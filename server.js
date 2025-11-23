@@ -152,7 +152,7 @@ app.post('/sites', (req, res) => {
     const newComment = {
       commentId: req.body.commentId,          
       author: req.body.author,
-      date: new Date(), // default today
+      date: req.body.date,
       content: req.body.content,
       rating: req.body.rating
     };
