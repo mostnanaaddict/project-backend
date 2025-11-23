@@ -69,13 +69,6 @@
           "date": "2024-06-05",
           "content": "Even more impressive than expected. Definitely worth the trip!",
           "rating": 5
-        },
-        {
-          "commentId": "3",
-          "author": "Tasnim Ammar",
-          "date": "2025-11-22T21:12:48.484Z",
-          "content": "Very nice.",
-          "rating": 4
         }
       ],
       "gallery": [
@@ -227,22 +220,6 @@
         "sites/sbeitla/2.jpg",
         "sites/sbeitla/3.jpg"
       ]
-    },
-    {
-      "id": "7",
-      "title": "Kerkouane",
-      "era": "Punic",
-      "address": "Kerkouane, Nabeul Governorate, Tunisia",
-      "price": 10,
-      "creation_date": "00500-01-01",
-      "isBC": false,
-      "rating": 4.4,
-      "openingHours": "08:00 - 17:00",
-      "visitorsPerYear": 200000,
-      "description": "Kerkouane is one of the best-preserved Punic cities in the Mediterranean. Unlike many other ancient towns in Tunisia, it was abandoned and never rebuilt by the Romans, giving a rare insight into Punic urban planning.",
-      "thumbnail": "http://localhost:3000/uploads/1763886622632-image_2025-11-17_182615709.png",
-      "gallery": [],
-      "open": false
     }
   ]
 }
