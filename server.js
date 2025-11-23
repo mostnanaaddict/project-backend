@@ -119,11 +119,6 @@ app.put('/admin/password', (req, res) => {
 });
 
 
-
-
-
-
-
 // get da sites
 app.get('/sites', (req, res) => {
     let sites = readSites();

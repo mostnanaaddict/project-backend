@@ -2,7 +2,7 @@
   "admin": [
     {
       "username": "admin",
-      "password": "admin@123"
+      "password": "admin123"
     }
   ],
   "sites": [
@@ -44,7 +44,7 @@
     },
     {
       "id": "2",
-      "title": "El Jem Amphitheatre",
+      "title": "Amphitheatre of El Jem",
       "era": "Roman",
       "thumbnail": "sites/amphitheatre/main.jpg",
       "address": "El Jem, Mahdia Governorate, Tunisia",
@@ -70,10 +70,16 @@
           "date": "2024-06-05",
           "content": "Even more impressive than expected. Definitely worth the trip!",
           "rating": 5
+        },
+        {
+          "commentId": "3",
+          "author": "Tasnim Ammar",
+          "date": "2025-11-22T21:12:48.484Z",
+          "content": "Very nice.",
+          "rating": 4
         }
-        
       ],
-      "gallery": [  
+      "gallery": [
         "sites/amphitheatre/1.jpg",
         "sites/amphitheatre/2.jpg",
         "sites/amphitheatre/3.jpg"
@@ -189,7 +195,7 @@
     },
     {
       "id": "6",
-      "title": "Sbeitla (Sufetula)",
+      "title": "Sbeitla",
       "era": "Roman",
       "thumbnail": "sites/sbeitla/main.jpg",
       "address": "Sbeitla, Kasserine Governorate, Tunisia",
@@ -224,8 +230,8 @@
       ]
     },
     {
-      "id": 7,
-      "title": "ca",
+      "id": "7",
+      "title": "Kerkouane",
       "era": "Punic",
       "address": "Kerkouane, Nabeul Governorate, Tunisia",
       "price": 10,
@@ -235,7 +241,8 @@
       "openingHours": "08:00 - 17:00",
       "visitorsPerYear": 200000,
       "description": "Kerkouane is one of the best-preserved Punic cities in the Mediterranean. Unlike many other ancient towns in Tunisia, it was abandoned and never rebuilt by the Romans, giving a rare insight into Punic urban planning.",
-      "thumbnail": "http://localhost:3000/uploads/1763829648102-Capture d'Ã©cran 2025-09-17 173627.png",
+      "thumbnail": "http://localhost:3000/uploads/1763886622632-image_2025-11-17_182615709.png",
+      "gallery": [],
       "open": false
     }
   ]
